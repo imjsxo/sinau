@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>jQuery Events</title>
+	<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+
+	<input type="text" id="first"/>
+	<input type="text" id="second" />
+	<br>
+	<br>
+
+	<p id="hasil"></p>
+
+	<button id="plus">+</button>
+	<button id="min">-</button>
+	<button id="kali">*</button>
+	<button id="bagi">\</button>
+
+	<script>
+		
+		$("#plus").click(function(){
+			var input1 = parseInt($('#first').val());
+			var input2 = parseInt($('#second').val());
+			var sum = input1 + input2;
+		$("#hasil").text(sum)
+		})
+
+		$("#min").click(function(){
+			var min1 = parseInt($('#first').val());
+			var min2 = parseInt($('#second').val());
+			var min = min1 - min2;
+		$("#hasil").text(min)
+		})
+
+		$("#kali").click(function(){
+			var kali1 = parseInt($('#first').val());
+			var kali2 = parseInt($('#second').val());
+			var kali = kali1 * kali2;
+		$("#hasil").text(kali)
+		})
+
+		$("#bagi").click(function(){
+			var bagi1 = parseInt($('#first').val());
+			var bagi2 = parseInt($('#second').val());
+			var bagi = bagi1 / bagi2;
+		$("#hasil").text(bagi)
+		})
+
+
+		
+// alert($('#first').val());
+	</script>
+</body>
+</html>
